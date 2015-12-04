@@ -37,25 +37,42 @@ class Pastee
         end
       end
 
+      class UndefinedApplicationKeyError < StandardError
+        def message
+          'You must provide an application key.'
+        end
+      end
+
+      class InvalidFieldError < StandardError
+        def initialize(msg, field)
+          super(msg)
+          @field = field
+        end
+
+        def message
+          msg
+        end
+      end
+
       class RequiresUserApplication < StandardError
         def message
           'This resource requires a UserApplication.'
         end
       end
 
-      class InvalidMethod < StandardError
+      class InvalidMethodError < StandardError
         def message
           'The endpoint was requested with an invalid method.'
         end
       end
 
-      class InvalidFormat < StandardError
+      class InvalidFormatError < StandardError
         def message
           'The request was in a format other than XML or JSON.'
         end
       end
 
-      class TooManyRequests < StandardError
+      class TooManyRequestsError < StandardError
         def message
           'Too many pastes have been submitted with the given API key.'
         end
@@ -67,7 +84,7 @@ class Pastee
         end
       end
 
-      class ServiceUnavailable < StandardError
+      class ServiceUnavailableError < StandardError
         def message
           'The service is temporarily offline for maintenance.'
         end

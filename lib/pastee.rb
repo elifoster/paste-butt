@@ -2,15 +2,14 @@ require 'httpclient'
 require 'json'
 require_relative 'errors'
 
+# This class contains interfaces to the standard Pastee API. For the beta API,
+#   use the PasteeBeta class.
 class Pastee
   # Creates a new instance of Pastee.
   # @param api_key
   # @param use_ssl [Boolean] Whether to use a secure SSL connection.
-  def initialize(api_key, use_ssl = true, use_beta = false)
+  def initialize(api_key, use_ssl = true)
     @url = use_ssl ? 'https://paste.ee/' : 'http://paste.ee/'
-    # Note that in the future, when the API is out of beta, this URL will need
-    #   to be updated to api.paste.ee rather than api.beta.paste.ee
-    @url = use_beta ? 'https://api.beta.paste.ee' : @url
     @use_beta = use_beta
     @client = HTTPClient.new
     @client.ssl_config.verify_mode = OpenSSL::SSL::VERIFY_NONE if @use_beta
@@ -55,9 +54,5 @@ class Pastee
     when 'error_invalid_key' then fail Pastee::Errors::InvalidKeyError
     when 'error_invalid_language' then fail Pastee::Errors::InvalidLanguageError
     end
-  end
-
-  def check_beta
-    fail Pastee::Errors::Beta::MustUseBetaError unless @use_beta
   end
 end
