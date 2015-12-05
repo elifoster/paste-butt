@@ -120,9 +120,8 @@ class PasteeBeta
   def get_paste(id)
     uri = URI.parse(URI.encode("#{URL}/v1/pastes/#{id}"))
     header = { 'X-Auth-Token' => @key }
-    response = @client.get(uri, header)
+    response = @client.get(uri, nil, header)
     json = JSON.parse(response.body)
-    p json
     if json['success']
       return json['paste']
     else
