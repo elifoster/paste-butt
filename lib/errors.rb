@@ -43,6 +43,12 @@ class Pastee
         end
       end
 
+      class InvalidAppKeyError < StandardError
+        def message
+          'The application key provided is invalid.'
+        end
+      end
+
       class InvalidFieldError < StandardError
         def initialize(msg, field)
           super(msg)
@@ -54,7 +60,7 @@ class Pastee
         end
       end
 
-      class RequiresUserApplication < StandardError
+      class RequiresUserApplicationError < StandardError
         def message
           'This resource requires a UserApplication.'
         end

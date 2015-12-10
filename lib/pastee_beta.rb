@@ -38,7 +38,7 @@ class PasteeBeta
   # @param [Boolean] Whether the paste is encrypted.
   # @param [String] The syntax highlight language. It is recommended to use the
   #   constants in PasteeBeta::Constants::Syntax in order to avoid errors.
-  # @return
+  # @return [String] The new paste's ID.
   def submit(paste, description, name, encrypted = false,
                   language = PasteeBeta::Constants::Syntax::AUTODETECT)
     uri = URI.parse(URI.encode("#{URL}/v1/pastes"))
@@ -80,7 +80,7 @@ class PasteeBeta
     if json['success']
       return json['key']
     else
-      throw_error(json['errors'][0]['message'])
+      throw_error(json['errors'])
     end
   end
 
@@ -105,7 +105,7 @@ class PasteeBeta
         ret << h['id']
       end
     else
-      throw_error(json['errors'][0]['message'])
+      throw_error(json['errors'])
     end
     ret
   end
@@ -116,7 +116,6 @@ class PasteeBeta
   # @return [Hash] The information for the paste, including id,
   #   encryption (boolean), description, view count, creation date, expiration
   #   date, and the sections.
-  # @todo wait for a response from nikki about why this isn't working, then fix
   def get_paste(id)
     uri = URI.parse(URI.encode("#{URL}/v1/pastes/#{id}"))
     header = { 'X-Auth-Token' => @key }
@@ -158,6 +157,10 @@ class PasteeBeta
                                                        ' invalid.', field)
     when 'No application key supplied.'
       fail Pastee::Errors::Beta::UndefinedApplicationKeyError
+    when 'NotUserApplication'
+      fail Pastee::Errors::Beta::RequiresUserApplicationError
+    when 'Invalid application key.'
+      fail Pastee::Errors::Beta::InvalidAppKeyError
     end
   end
 
