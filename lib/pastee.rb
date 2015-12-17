@@ -10,9 +10,7 @@ class Pastee
   # @param use_ssl [Boolean] Whether to use a secure SSL connection.
   def initialize(api_key, use_ssl = true)
     @url = use_ssl ? 'https://paste.ee/' : 'http://paste.ee/'
-    @use_beta = use_beta
     @client = HTTPClient.new
-    @client.ssl_config.verify_mode = OpenSSL::SSL::VERIFY_NONE if @use_beta
     @key = api_key
   end
 
