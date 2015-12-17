@@ -102,7 +102,6 @@ class PasteeBeta
   # @param [Integer] The number of entries to get per page.
   # @param [Integer] The page number to begin at.
   # @return [Array<String>] All paste IDs in that page.
-  # @todo wait for a response from nikki about why this isn't working, then fix
   def list_pastes(perpage = 25, page = 1)
     uri = URI.parse(URI.encode("#{URL}/v1/pastes"))
     params = {
