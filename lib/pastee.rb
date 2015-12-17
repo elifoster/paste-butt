@@ -2,6 +2,8 @@ require 'httpclient'
 require 'json'
 require_relative 'errors'
 
+# This class contains interfaces to the standard Pastee API. For the beta API,
+#   use the PasteeBeta class.
 class Pastee
   # Creates a new instance of Pastee.
   # @param api_key
