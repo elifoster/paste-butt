@@ -41,7 +41,6 @@ class PasteeBeta
   # @return [String] The new paste's ID.
   def submit(paste, description, name, encrypted = false,
                   language = PasteeBeta::Constants::Syntax::AUTODETECT)
-    uri = URI.parse(URI.encode("#{URL}/v1/pastes"))
     params = {
       description: description,
       sections: [
@@ -53,14 +52,8 @@ class PasteeBeta
       ]
     }
     params[:encrypted] = encrypted ? 1 : 0
-    header = { 'X-Auth-Token' => @key, 'Content-Type' => 'application/json' }
-    response = @client.post(uri, params.to_json, header)
-    json = JSON.parse(response.body)
-    if json['success']
-      return json['id']
-    else
-      throw_error(json['errors'])
-    end
+    json = post('pastes', params)
+    json['id']
   end
 
   # Gets the UserApplication key for the provided user.
@@ -69,32 +62,17 @@ class PasteeBeta
   # @param [String] The password for that user.
   # @return [String] The user's UserApplication key.
   def get_user_key(username, password)
-    uri = URI.parse(URI.encode("#{URL}/v1/users/authenticate"))
     params = {
       username: username,
-      password: password,
-      key: @key
+      password: password
     }
-    response = @client.post(uri, params)
-    json = JSON.parse(response.body)
-    if json['success']
-      return json['key']
-    else
-      throw_error(json['errors'])
-    end
+    post('users/authenticate', params)['key']
   end
 
   # Gets the current API type.
   # @return [String] Either "Application" or "UserApplication".
   def get_api_key_type
-    uri = URI.parse(URI.encode("#{URL}/v1/users/info"))
-    response = @client.get(uri, key: @key)
-    json = JSON.parse(response.body)
-    if json['success']
-      return json['type']
-    else
-      throw_error(json['errors'])
-    end
+    get('users/info')['type']
   end
 
   # Gets a list of paste IDs.
@@ -103,21 +81,15 @@ class PasteeBeta
   # @param [Integer] The page number to begin at.
   # @return [Array<String>] All paste IDs in that page.
   def list_pastes(perpage = 25, page = 1)
-    uri = URI.parse(URI.encode("#{URL}/v1/pastes"))
     params = {
       perpage: perpage,
       page: page,
       key: @key
     }
-    response = @client.get(uri, params)
-    json = JSON.parse(response.body)
+    json = get('pastes', params)
     ret = []
-    if json['success']
-      json['data'].each do |h|
-        ret << h['id']
-      end
-    else
-      throw_error(json['errors'])
+    json['data'].each do |h|
+      ret << h['id']
     end
     ret
   end
@@ -129,15 +101,7 @@ class PasteeBeta
   #   encryption (boolean), description, view count, creation date, expiration
   #   date, and the sections.
   def get_paste(id)
-    uri = URI.parse(URI.encode("#{URL}/v1/pastes/#{id}"))
-    header = { 'X-Auth-Token' => @key }
-    response = @client.get(uri, nil, header)
-    json = JSON.parse(response.body)
-    if json['success']
-      return json['paste']
-    else
-      throw_error(json['errors'])
-    end
+    get("pastes/#{id}")['paste']
   end
 
   # Deletes a paste permanently.
@@ -186,5 +150,41 @@ class PasteeBeta
     message = errors[0]['message']
     field = errors[0]['field'] if defined? errors[0]['field']
     fail_with(message, field)
+  end
+
+  # Performs a generic GET request. Authentication is handled automatically.
+  # @param url_suffix [String] Everything after v1/ for the particular API.
+  # @param params [Hash] The HTTP parameters.
+  # @param header [Hash] Non-Auth header key/value pairs.
+  # @return [JSON] The successful response as a JSON.
+  def get(url_suffix, params = {}, header = {})
+    uri = URI.parse(URI.encode("#{URL}/v1/#{url_suffix}"))
+    header['X-Auth-Token'] = @key
+    response = @client.get(uri, params, header)
+    json = JSON.parse(response.body)
+    if json['success']
+      return json
+    else
+      throw_error(json['errors'])
+    end
+  end
+
+  # Performs a generic POST requests. Authentication and content-types are
+  #   handled automatically.
+  # @param url_suffix [String] See #get
+  # @param params [Hash] See #get
+  # @param header [Hash] See #get
+  # @return [JSON] See #get
+  def post(url_suffix, params = {}, header = {})
+    uri = URI.parse(URI.encode("#{URL}/v1/#{url_suffix}"))
+    header['X-Auth-Token'] = @key
+    header['Content-Type'] = 'application/json'
+    response = @client.post(uri, params.to_json, header)
+    json = JSON.parse(response.body)
+    if json['success']
+      return json
+    else
+      throw_error(json['errors'])
+    end
   end
 end
