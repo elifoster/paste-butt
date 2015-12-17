@@ -84,6 +84,19 @@ class PasteeBeta
     end
   end
 
+  # Gets the current API type.
+  # @return [String] Either "Application" or "UserApplication".
+  def get_api_key_type
+    uri = URI.parse(URI.encode("#{URL}/v1/users/info"))
+    response = @client.get(uri, key: @key)
+    json = JSON.parse(response.body)
+    if json['success']
+      return json['type']
+    else
+      throw_error(json['errors'])
+    end
+  end
+
   # Gets a list of paste IDs.
   # @author Eli Clemente Gordillo Foster
   # @param [Integer] The number of entries to get per page.
