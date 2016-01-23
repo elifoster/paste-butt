@@ -2,421 +2,421 @@ class PasteeBeta
   module Constants
     module Syntax
       # 1C
-      ONEC = '1c'
+      ONEC = '1c'.freeze
 
       # Access log
-      ACCESS_LOG = 'accesslog'
+      ACCESS_LOG = 'accesslog'.freeze
 
       # Apache
-      APACHE = 'apache'
+      APACHE = 'apache'.freeze
 
       # AppleScript
-      APPLESCRIPT = 'applescript'
+      APPLESCRIPT = 'applescript'.freeze
 
       # ARM Assembly
-      ARM_ASSEMBLY = 'armasm'
+      ARM_ASSEMBLY = 'armasm'.freeze
 
       # AsciiDoc
-      ASCIIDOC = 'asciidoc'
+      ASCIIDOC = 'asciidoc'.freeze
 
       # AspectJ
-      ASPECTJ = 'aspectj'
+      ASPECTJ = 'aspectj'.freeze
 
       # Auto Detect
-      AUTODETECT = 'autodetect'
+      AUTODETECT = 'autodetect'.freeze
 
       # AutoHotkey
-      AUTOHOTKEY = 'autohotkey'
+      AUTOHOTKEY = 'autohotkey'.freeze
 
       # AutoIt
-      AUTOIT = 'autoit'
+      AUTOIT = 'autoit'.freeze
 
       # AVR Assembler
-      AVRASM = 'avrasm'
+      AVRASM = 'avrasm'.freeze
 
       # Axapta
-      AXAPTA =  'axapta'
+      AXAPTA =  'axapta'.freeze
 
       # Bash
-      BASH = 'bash'
+      BASH = 'bash'.freeze
 
       # Brainfuck
-      BRAINFUCK = 'brainfuck'
+      BRAINFUCK = 'brainfuck'.freeze
 
       # C#
-      CSHARP = 'cs'
+      CSHARP = 'cs'.freeze
 
       # C++
-      CPLUSPLUS = 'cpp'
+      CPLUSPLUS = 'cpp'.freeze
 
       # C/AL
-      CAL = 'cal'
+      CAL = 'cal'.freeze
 
       # Cap'n Proto
-      CAPNPROTO = 'capnproto'
+      CAPNPROTO = 'capnproto'.freeze
 
       # Ceylon
-      CEYLON = 'ceylon'
+      CEYLON = 'ceylon'.freeze
 
       # Clojure
-      CLOJURE = 'clojure'
+      CLOJURE = 'clojure'.freeze
 
       # Clojure REPL
-      CLOJURE_REPL = 'clojure-repl'
+      CLOJURE_REPL = 'clojure-repl'.freeze
 
       # CMake
-      CMAKE = 'cmake'
+      CMAKE = 'cmake'.freeze
 
       # CoffeeScript
-      COFFEESCRIPT = 'coffeescript'
+      COFFEESCRIPT = 'coffeescript'.freeze
 
       # crmsh
-      CRMSH = 'crmsh'
+      CRMSH = 'crmsh'.freeze
 
       # Crystal
-      CRYSTAL = 'crystal'
+      CRYSTAL = 'crystal'.freeze
 
       # CSS
-      CSS = 'css'
+      CSS = 'css'.freeze
 
       # D
-      D = 'd'
+      D = 'd'.freeze
 
       # Dart
-      DART = 'dart'
+      DART = 'dart'.freeze
 
       # Delphi
-      DELPHI = 'delphi'
+      DELPHI = 'delphi'.freeze
 
       # Diff
-      DIFF = 'diff'
+      DIFF = 'diff'.freeze
 
       # Django
-      DJANGO = 'django'
+      DJANGO = 'django'.freeze
 
       # DNS Zone file
-      DNS = 'dns'
+      DNS = 'dns'.freeze
 
       # Dockerfile
-      DOCKERFILE = 'dockerfile'
+      DOCKERFILE = 'dockerfile'.freeze
 
       # DOS .bat
-      DOSBAT = 'dos'
+      DOSBAT = 'dos'.freeze
 
       # Dust
-      DUST = 'dust'
+      DUST = 'dust'.freeze
 
       # Elixir
-      ELIXIR = 'elixir'
+      ELIXIR = 'elixir'.freeze
 
       # Elm
-      ELM = 'elm'
+      ELM = 'elm'.freeze
 
       # ERB (Embedded Ruby)
-      ERB = 'erb'
+      ERB = 'erb'.freeze
 
       # Erlang
-      ERLANG = 'erlang'
+      ERLANG = 'erlang'.freeze
 
       # Erlang REPL
-      ERLANG_REPL = 'erlang-repl'
+      ERLANG_REPL = 'erlang-repl'.freeze
 
       # F#
-      FSHARP = 'fsharp'
+      FSHARP = 'fsharp'.freeze
 
       # FIX
-      FIX = 'fix'
+      FIX = 'fix'.freeze
 
       # Fortran
-      FORTRAN = 'fortran'
+      FORTRAN = 'fortran'.freeze
 
       # GAMS
-      GAMS = 'gams'
+      GAMS = 'gams'.freeze
 
       # G-Code (ISO 6983)
-      GCODE = 'gcode'
+      GCODE = 'gcode'.freeze
 
       # Gherkin
-      GHERKIN = 'gherkin'
+      GHERKIN = 'gherkin'.freeze
 
       # GLSL
-      GLSL = 'glsl'
+      GLSL = 'glsl'.freeze
 
       # Go
-      GO = 'go'
+      GO = 'go'.freeze
 
       # Golo
-      GOLO = 'golo'
+      GOLO = 'golo'.freeze
 
       # Gradle
-      GRADLE = 'gradle'
+      GRADLE = 'gradle'.freeze
 
       # Groovy
-      GROOVY = 'groovy'
+      GROOVY = 'groovy'.freeze
 
       # Haml
-      HAML = 'haml'
+      HAML = 'haml'.freeze
 
       # Handlebars
-      HANDLEBARS = 'handlebars'
+      HANDLEBARS = 'handlebars'.freeze
 
       # Haskell
-      HASKELL = 'haskell'
+      HASKELL = 'haskell'.freeze
 
       # Haxe
-      HAXE = 'haxe'
+      HAXE = 'haxe'.freeze
 
       # HTML, XML
-      XML = 'xml'
+      XML = 'xml'.freeze
 
       # HTTP
-      HTTP = 'http'
+      HTTP = 'http'.freeze
 
       # Inform 7
-      INFORM7 = 'inform7'
+      INFORM7 = 'inform7'.freeze
 
       # Ini
-      INI = 'ini'
+      INI = 'ini'.freeze
 
       # Intel x86 Assembly
-      INTEL_X86_ASSEMBLY = 'x86asm'
+      INTEL_X86_ASSEMBLY = 'x86asm'.freeze
 
       # IRPF90
-      IRPF90 = 'irpf90'
+      IRPF90 = 'irpf90'.freeze
 
       # Java
-      JAVA = 'java'
+      JAVA = 'java'.freeze
 
       # JavaScript
-      JAVASCRIPT = 'javascript'
+      JAVASCRIPT = 'javascript'.freeze
 
       # JSON
-      JSON = 'json'
+      JSON = 'json'.freeze
 
       # Julia
-      JULIA = 'julia'
+      JULIA = 'julia'.freeze
 
       # Kotlin
-      KOTLIN = 'kotlin'
+      KOTLIN = 'kotlin'.freeze
 
       # Lasso
-      LASSO = 'lasso'
+      LASSO = 'lasso'.freeze
 
       # Less
-      LESS = 'less'
+      LESS = 'less'.freeze
 
       # Lisp
-      LISP = 'lisp'
+      LISP = 'lisp'.freeze
 
       # LiveCode
-      LIVECODE = 'livecodeserver'
+      LIVECODE = 'livecodeserver'.freeze
 
       # LiveScript
-      LIVESCRIPT = 'livescript'
+      LIVESCRIPT = 'livescript'.freeze
 
       # Lua
-      LUA = 'lua'
+      LUA = 'lua'.freeze
 
       # Makefile
-      MAKEFILE = 'makefile'
+      MAKEFILE = 'makefile'.freeze
 
       # Markdown
-      MARKDOWN = 'markdown'
+      MARKDOWN = 'markdown'.freeze
 
       # Mathematica
-      MATHEMATICA = 'mathematica'
+      MATHEMATICA = 'mathematica'.freeze
 
       # Matlab
-      MATLAB = 'matlab'
+      MATLAB = 'matlab'.freeze
 
       # MEL
-      MEL = 'mel'
+      MEL = 'mel'.freeze
 
       # Mercury
-      MERCURY = 'mercury'
+      MERCURY = 'mercury'.freeze
 
       # Mizar
-      MIZAR = 'mizar'
+      MIZAR = 'mizar'.freeze
 
       # Mojolicious
-      MOJO = 'mojolicious'
+      MOJO = 'mojolicious'.freeze
 
       # Monkey
-      MONKEY = 'monkey'
+      MONKEY = 'monkey'.freeze
 
       # Nginx
-      NGINX = 'nginx'
+      NGINX = 'nginx'.freeze
 
       # Nimrod
-      NIMROD = 'nimrod'
+      NIMROD = 'nimrod'.freeze
 
       # Nix
-      NIX = 'nix'
+      NIX = 'nix'.freeze
 
       # NSIS
-      NSIS = 'nsis'
+      NSIS = 'nsis'.freeze
 
       # Objective C
-      OBJECTIVE_C = 'objectivec'
+      OBJECTIVE_C = 'objectivec'.freeze
 
       # OCaml
-      OCAML = 'ocaml'
+      OCAML = 'ocaml'.freeze
 
       # OpenSCAD
-      OPENSCAD = 'openscad'
+      OPENSCAD = 'openscad'.freeze
 
       # Oracle Rules Language
-      ORACLE_RULES = 'ruleslanguage'
+      ORACLE_RULES = 'ruleslanguage'.freeze
 
       # Oxygene
-      OXYGENE = 'oxygene'
+      OXYGENE = 'oxygene'.freeze
 
       # Parser3
-      PARSER3 = 'parser3'
+      PARSER3 = 'parser3'.freeze
 
       # Perl
-      PERL = 'perl'
+      PERL = 'perl'.freeze
 
       # pf
-      PF = 'pf'
+      PF = 'pf'.freeze
 
       # PHP
-      PHP = 'php'
+      PHP = 'php'.freeze
 
       # PowerShell
-      POWERSHELL = 'powershell'
+      POWERSHELL = 'powershell'.freeze
 
       # Processing
-      PROCESSING = 'processing'
+      PROCESSING = 'processing'.freeze
 
       # Prolog
-      PROLOG = 'prolog'
+      PROLOG = 'prolog'.freeze
 
       # Protocol Buffers
-      PROTOCOL_BUFFERS = 'protobuf'
+      PROTOCOL_BUFFERS = 'protobuf'.freeze
 
       # Puppet
-      PUPPET = 'puppet'
+      PUPPET = 'puppet'.freeze
 
       # Python
-      PYTHON = 'python'
+      PYTHON = 'python'.freeze
 
       # Python profile
-      PYTHON_PROFILE = 'profile'
+      PYTHON_PROFILE = 'profile'.freeze
 
       # Q
-      Q = 'q'
+      Q = 'q'.freeze
 
       # R
-      R = 'r'
+      R = 'r'.freeze
 
       # RenderMan RIB
-      RENDERMAN_RIB = 'rib'
+      RENDERMAN_RIB = 'rib'.freeze
 
       # RenderMan RSL
-      RENDERMAN_RSL = 'rsl'
+      RENDERMAN_RSL = 'rsl'.freeze
 
       # Roboconf
-      ROBOCONF = 'roboconf'
+      ROBOCONF = 'roboconf'.freeze
 
       # Ruby
-      RUBY = 'ruby'
+      RUBY = 'ruby'.freeze
 
       # Rust
-      RUST = 'rust'
+      RUST = 'rust'.freeze
 
       # Scala
-      SCALA = 'scala'
+      SCALA = 'scala'.freeze
 
       # Scheme
-      SCHEME = 'scheme'
+      SCHEME = 'scheme'.freeze
 
       # Scilab
-      SCILAB = 'scilab'
+      SCILAB = 'scilab'.freeze
 
       # SCSS
-      SCSS = 'scss'
+      SCSS = 'scss'.freeze
 
       # Smali
-      SMALI = 'smali'
+      SMALI = 'smali'.freeze
 
       # Smalltalk
-      SMALLTALK = 'smalltalk'
+      SMALLTALK = 'smalltalk'.freeze
 
       # SML
-      SML = 'sml'
+      SML = 'sml'.freeze
 
       # SQF
-      SQF = 'sqf'
+      SQF = 'sqf'.freeze
 
       # SQL
-      SQL = 'sql'
+      SQL = 'sql'.freeze
 
       # Stata
-      STATA = 'stata'
+      STATA = 'stata'.freeze
 
       # STEP Part 21 (ISO 10303-21)
-      STEP = 'step21'
+      STEP = 'step21'.freeze
 
       # Stylus
-      STYLUS = 'stylus'
+      STYLUS = 'stylus'.freeze
 
       # Swift
-      SWIFT = 'swift'
+      SWIFT = 'swift'.freeze
 
       # Tcl
-      TCL = 'tcl'
+      TCL = 'tcl'.freeze
 
       # TeX
-      TEX = 'tex'
+      TEX = 'tex'.freeze
 
       # Text
-      TEXT = 'text'
+      TEXT = 'text'.freeze
 
       # Thrift
-      THRIFT = 'thrift'
+      THRIFT = 'thrift'.freeze
 
       # TP
-      TP = 'tp'
+      TP = 'tp'.freeze
 
       # Twig
-      TWIG = 'twig'
+      TWIG = 'twig'.freeze
 
       # TypeScript
-      TYPESCRIPT = 'typescript'
+      TYPESCRIPT = 'typescript'.freeze
 
       # Vala
-      VALA = 'vala'
+      VALA = 'vala'.freeze
 
       # VB.NET
-      VB = 'vbnet'
+      VB = 'vbnet'.freeze
 
       # VBScript
-      VBSCRIPT = 'vbscript'
+      VBSCRIPT = 'vbscript'.freeze
 
       # VBScript in HTML
-      VBSCRIPT_HTML = 'vbscript-html'
+      VBSCRIPT_HTML = 'vbscript-html'.freeze
 
       # Verilog
-      VERILOG = 'verilog'
+      VERILOG = 'verilog'.freeze
 
       # VHDL
-      VHDL = 'vhdl'
+      VHDL = 'vhdl'.freeze
 
       # Vim Script
-      VIM = 'vim'
+      VIM = 'vim'.freeze
 
       # XL
-      XL = 'xl'
+      XL = 'xl'.freeze
 
       # XQuery
-      XQUERY = 'xquery'
+      XQUERY = 'xquery'.freeze
 
       # YAML
-      YAML = 'yaml'
+      YAML = 'yaml'.freeze
 
       # Zephir
-      ZEPHIR = 'zephir'
+      ZEPHIR = 'zephir'.freeze
     end
   end
 end

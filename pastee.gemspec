@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.authors = ['Eli Foster']
   s.name = 'pastee'
-  s.version = '2.0.0'
+  s.version = '2.0.1'
   s.summary = 'A simple interface to the paste.ee API'
   s.description = 'Accessing the paste.ee simply through Ruby. Has full ' \
                   'support for all of their custom errors.'
@@ -17,5 +17,5 @@ Gem::Specification.new do |s|
     'lib/syntax.rb',
     'CHANGELOG.md'
   ]
-  s.add_runtime_dependency('httpclient', '>= 2.6.0.1')
+  s.add_runtime_dependency('httpclient', '>= 2.7.1')
 end

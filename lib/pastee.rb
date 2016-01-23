@@ -35,7 +35,6 @@ class Pastee
     params[:language] = language unless language.nil?
     response = @client.post(uri, params)
     json = JSON.parse(response.body)
-    p json
     if json['status'] == 'error'
       throw_error(json['error'])
     else

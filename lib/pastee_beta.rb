@@ -8,7 +8,7 @@ require_relative 'syntax'
 # @author Eli Clemente Gordillo Foster
 # @since 2.0.0
 class PasteeBeta
-  URL = 'https://api.beta.paste.ee'
+  URL = 'https://api.beta.paste.ee'.freeze
 
   # Initializes the PasteeBeta instance.
   # @author Eli Clemente Gordillo Foster
@@ -52,7 +52,7 @@ class PasteeBeta
       ]
     }
     params[:encrypted] = encrypted ? 1 : 0
-    json = post('pastes', params)
+    json = post('pastes'.freeze, params)
     json['id']
   end
 

@@ -1,5 +1,9 @@
 # Changelog
 ## Version 2
+### Version 2.0.1
+* Don't print the response when submitting pastes.
+* Update to Ruby 2.3 and HTTPClient 2.7
+
 ### Version 2.0.0
 * Add support for beta API.
 
