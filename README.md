@@ -1,4 +1,6 @@
 # pastee-rb
+[![Gem Version](https://badge.fury.io/rb/pastee.svg)](https://badge.fury.io/rb/pastee)
+
 A Ruby interface to the paste.ee web API
 
 ## Installation
@@ -17,3 +19,6 @@ Then execute:
 ``` shell
 $ bundle
 ```
+
+## Documentation
+See the [RubyDocs](http://www.rubydoc.info/gems/pastee).
