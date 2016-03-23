@@ -1,12 +1,13 @@
 Gem::Specification.new do |s|
   s.authors = ['Eli Foster']
   s.name = 'pastee'
-  s.version = '2.0.1'
+  s.version = '2.0.2'
   s.summary = 'A simple interface to the paste.ee API'
   s.description = 'Accessing the paste.ee simply through Ruby. Has full ' \
                   'support for all of their custom errors.'
   s.email = 'elifosterwy@gmail.com'
   s.homepage = 'https://github.com/elifoster/pasteee-rb'
+  s.license = 'MIT'
   s.metadata = {
     'issue_tracker' => 'https://github.com/elifoster/pastee-rb/issues'
   }
