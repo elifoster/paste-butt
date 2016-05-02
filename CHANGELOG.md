@@ -1,5 +1,9 @@
 # Changelog
 ## Version 2
+### Version 2.0.3
+* Use pessimistic version requirements.
+* Bump HTTPClient.
+
 ### Version 2.0.2
 * License as MIT
 
