@@ -95,11 +95,12 @@ class Pastee
   # Simple submission method. Transforms a name and text into a proper single-Section Paste object and submits it.
   # @param name [String] The paste's name.
   # @param text [String] The paste text.
+  # @param encrypted [Boolean] Whether this paste should be treated as encrypted by pastee.
   # @return (see #submit)
   # @raise (see #throw_error)
-  def submit_simple(name, text)
+  def submit_simple(name, text, encrypted = false)
     section = Pastee::Paste::Section.new(name: name, contents: text)
-    paste = Pastee::Paste.new(description: name, sections: [section])
+    paste = Pastee::Paste.new(description: name, sections: [section], encrypted: encrypted)
     submit(paste)
   end
 
