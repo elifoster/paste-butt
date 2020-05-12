@@ -9,7 +9,7 @@ class Pastee
     # @return [String]
     attr_reader :full_name
 
-    # Creates a new object representing a Syntax on the Pastee website
+    # Creates a new object representing a Syntax on the Pastee website.
     # @param opts [Hash<String, Object>] The options hash. This is usually obtained by the Pastee API.
     # @option opts [Integer] 'id' The integer ID for this syntax.
     # @option opts [String] 'short' The shortened name for the syntax.

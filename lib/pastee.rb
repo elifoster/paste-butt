@@ -17,8 +17,8 @@ class Pastee
     )
   end
 
-  # Obtains information for a Pastee syntax from its integer ID
-  # @param id [Integer] The ID for this syntax
+  # Obtains information for a Pastee syntax from its integer ID.
+  # @param id [Integer] The ID for this syntax.
   # @return [Pastee::Syntax] The syntax object representative of this integer ID.
   # @raise (see #throw_error)
   def get_syntax(id)
@@ -29,8 +29,8 @@ class Pastee
     throw_error(response)
   end
 
-  # Obtains a list of valid Pastee syntaxes
-  # @return [Array<Pastee::Syntax>] A list of syntax objects
+  # Obtains a list of valid Pastee syntaxes.
+  # @return [Array<Pastee::Syntax>] A list of syntax objects.
   # @raise (see #throw_error)
   def list_syntaxes
     uri = URI.parse("#{BASE_URL}/syntaxes")
@@ -40,9 +40,9 @@ class Pastee
     throw_error(response)
   end
 
-  # Gets paste information from its string ID
-  # @param id [String] The paste ID to obtain information for
-  # @return [Pastee::Paste] The paste that is tied to the provided ID
+  # Gets paste information from its string ID.
+  # @param id [String] The paste ID to obtain information for.
+  # @return [Pastee::Paste] The paste that is tied to the provided ID.
   # @raise (see #throw_error)
   def get_paste(id)
     uri = URI.parse("#{BASE_URL}/pastes/#{id}")
@@ -52,9 +52,9 @@ class Pastee
     throw_error(response)
   end
 
-  # Submits a POST request to the URL. Build a paste using Pastee::Paste and Pastee::Section and submit it. This new
-  # way of creating and submitting pastes is a little more convoluted than with the legacy (non-sectional) API, so
-  # use the following example as a guideline.
+  # Submits a new paste to Pastee. Build a paste using Pastee::Paste and Pastee::Section and submit it. This new way of
+  # creating and submitting pastes is a little more convoluted than with the legacy (non-sectional) API, so use the
+  # following example as a guideline. {#submit_simple} is simpler and should be used for simple single-section pastes.
   # @example
   #   section1 = Pastee::Paste::Section.new(
   #     name: 'section 1', # syntax defaults to autodetect
@@ -93,7 +93,7 @@ class Pastee
   end
 
   # Simple submission method. Transforms a name and text into a proper single-Section Paste object and submits it.
-  # @param name [String] The paste's name
+  # @param name [String] The paste's name.
   # @param text [String] The paste text.
   # @return (see #submit)
   # @raise (see #throw_error)
@@ -104,8 +104,8 @@ class Pastee
   end
 
   # Delete a paste.
-  # @param id [String] The paste ID to delete
-  # @return [Boolean] True if it was successfully deleted
+  # @param id [String] The paste ID to delete.
+  # @return [Boolean] True if it was successfully deleted.
   # @raise (see #throw_error)
   def delete(id)
     uri = URI.parse("#{BASE_URL}/pastes/#{id}")
@@ -115,7 +115,7 @@ class Pastee
     throw_error(response)
   end
 
-  # Get the user type for the currently authenticated user
+  # Get the user type for the currently authenticated user.
   # @return [String] The user type.
   # @raise (see #throw_error)
   def get_user_type
@@ -128,14 +128,14 @@ class Pastee
 
   private
 
-  # Determines and raises the right error according to the error code provided by the pastee API
-  # @param response [Hash] The response object returned by the pastee API and parsed
-  # @raise [Pastee::Errors::BadRequestError] on 400, 404, 405, and 406
-  # @raise [Pastee::Errors::InvalidKeyError] on 401
-  # @raise [Pastee::Errors::RequiresUserApplicationError] on 403
-  # @raise [Pastee::Errors::TooManyRequestsError] on 429
-  # @raise [Pastee::Errors::InternalServerError] on 500
-  # @raise [Pastee::Errors::ServiceUnavailableError] on 503
+  # Determines and raises the right error according to the error code provided by the pastee API.
+  # @param response [Hash] The response object returned by the pastee API and parsed.
+  # @raise [Pastee::Errors::BadRequestError] on 400, 404, 405, and 406.
+  # @raise [Pastee::Errors::InvalidKeyError] on 401.
+  # @raise [Pastee::Errors::RequiresUserApplicationError] on 403.
+  # @raise [Pastee::Errors::TooManyRequestsError] on 429.
+  # @raise [Pastee::Errors::InternalServerError] on 500.
+  # @raise [Pastee::Errors::ServiceUnavailableError] on 503.
   # @raise [Pastee::Errors::UnknownError] if the error code is not recognized.
   def throw_error(response)
     error = response['errors'][0]

@@ -26,7 +26,7 @@ class Pastee
     # @param opts [Hash] Options hash. Keys can either be strings or symbols — they will be converted to symbols.
     # @option opts [String] :id Paste ID.
     # @option opts [Boolean] :encrypted Whether this paste is treated as encrypted. Pastee does not actually encrypt
-    # pastes, this only affects how it appears on the website.
+    #   pastes, this only affects how it appears on the website.
     # @option opts [String] :description The paste's description or name.
     # @option opts [Integer] :views How many times this paste has been viewed.
     # @option opts [String] :created_at When this paste was created, in string form. Is parsed into a DateTime.
