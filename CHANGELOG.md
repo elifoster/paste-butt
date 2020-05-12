@@ -1,4 +1,8 @@
 # Changelog
+## Version 3
+### Version 3.0.0
+* Update for new Pastee API. Pretty much a complete rewrite.
+
 ## Version 2
 ### Version 2.0.3
 * Use pessimistic version requirements.
