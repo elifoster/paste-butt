@@ -13,9 +13,9 @@ Gem::Specification.new do |s|
   }
   s.files = [
     'lib/pastee.rb',
-    'lib/errors.rb',
-    'lib/pastee_beta.rb',
-    'lib/syntax.rb',
+    'lib/pastee/errors.rb',
+    'lib/pastee/paste.rb',
+    'lib/pastee/syntax.rb',
     'CHANGELOG.md'
   ]
   s.add_runtime_dependency('httpclient', '~> 2.8')
