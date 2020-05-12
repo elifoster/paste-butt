@@ -10,7 +10,7 @@ DEPENDENCIES
   httpclient (~> 2.8)
 
 RUBY VERSION
-   ruby 2.3.0p0
+   ruby 2.6.5p114
 
 BUNDLED WITH
-   1.14.3
+   2.1.4
