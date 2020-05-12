@@ -9,7 +9,10 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/elifoster/pasteee-rb'
   s.license = 'MIT'
   s.metadata = {
-    'issue_tracker' => 'https://github.com/elifoster/pastee-rb/issues'
+    'bug_tracker_uri' => 'https://github.com/elifoster/pastee-rb/issues',
+    'changelog_uri' => 'https://elifoster.github.io/pastee-rb/file.CHANGELOG.html',
+    'documentation_uri' => 'https://elifoster.github.io/pastee-rb',
+    'source_code_uri' => 'https://github.com/elifoster/pastee-rb'
   }
   s.files = [
     'lib/pastee.rb',
