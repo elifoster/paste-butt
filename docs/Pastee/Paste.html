@@ -6,7 +6,7 @@
 <title>
   Class: Pastee::Paste
   
-    &mdash; Documentation by YARD 0.9.25
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
@@ -101,7 +101,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Wrapper class for pastes.</p>
+    
+<p>Wrapper class for pastes.</p>
 
 
   </div>
@@ -148,7 +149,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>When this paste was created.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>When this paste was created.</p>
 </div></span>
   
 </li>
@@ -176,7 +178,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The paste&#39;s description.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The paste&#39;s description.</p>
 </div></span>
   
 </li>
@@ -204,7 +207,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>When this paste will expire, or nil if it never expires.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>When this paste will expire, or nil if it never expires.</p>
 </div></span>
   
 </li>
@@ -232,7 +236,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The paste&#39;s ID.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The paste&#39;s ID.</p>
 </div></span>
   
 </li>
@@ -260,7 +265,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>An array of Sections for this paste.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>An array of Sections for this paste.</p>
 </div></span>
   
 </li>
@@ -288,7 +294,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>How many views the paste has.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>How many views the paste has.</p>
 </div></span>
   
 </li>
@@ -324,7 +331,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether this paste is encrypted.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Whether this paste is encrypted.</p>
 </div></span>
   
 </li>
@@ -349,7 +357,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Create a new Paste object.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new Paste object.</p>
 </div></span>
   
 </li>
@@ -372,7 +381,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts this to a hash object.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts this to a hash object.</p>
 </div></span>
   
 </li>
@@ -395,11 +405,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Create a new Paste object. Used when creating new pastes and when getting existing pastes. For creating new
-pastes, you only need to provide the description and sections, and optionally encrypted (defaults to false). The
-rest will be created automatically by the pastee API. ID, views, created_at, and expires_at are created by pastee,
-they are only here for receiving paste objects.
-object (returned by the pastee API) to be turned into a Section object.</p>
+    
+<p>Create a new Paste object. Used when creating new pastes and when getting existing pastes. For creating new pastes, you only need to provide the description and sections, and optionally encrypted (defaults to false). The rest will be created automatically by the pastee API. ID, views, created_at, and expires_at are created by pastee, they are only here for receiving paste objects. object (returned by the pastee API) to be turned into a Section object.</p>
 
 
   </div>
@@ -420,7 +427,8 @@ object (returned by the pastee API) to be turned into a Section object.</p>
       
       
         &mdash;
-        <div class='inline'><p>Options hash. Keys can either be strings or symbols — they will be converted to symbols.</p>
+        <div class='inline'>
+<p>Options hash. Keys can either be strings or symbols — they will be converted to symbols.</p>
 </div>
       
     </li>
@@ -440,7 +448,8 @@ object (returned by the pastee API) to be turned into a Section object.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>Paste ID.</p>
+            &mdash; <div class='inline'>
+<p>Paste ID.</p>
 </div>
           
         </li>
@@ -452,8 +461,8 @@ object (returned by the pastee API) to be turned into a Section object.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>Whether this paste is treated as encrypted. Pastee does not actually encrypt
-pastes, this only affects how it appears on the website.</p>
+            &mdash; <div class='inline'>
+<p>Whether this paste is treated as encrypted. Pastee does not actually encrypt pastes, this only affects how it appears on the website.</p>
 </div>
           
         </li>
@@ -465,7 +474,8 @@ pastes, this only affects how it appears on the website.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The paste&#39;s description or name.</p>
+            &mdash; <div class='inline'>
+<p>The paste&#39;s description or name.</p>
 </div>
           
         </li>
@@ -477,7 +487,8 @@ pastes, this only affects how it appears on the website.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>How many times this paste has been viewed.</p>
+            &mdash; <div class='inline'>
+<p>How many times this paste has been viewed.</p>
 </div>
           
         </li>
@@ -489,7 +500,8 @@ pastes, this only affects how it appears on the website.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>When this paste was created, in string form. Is parsed into a DateTime.</p>
+            &mdash; <div class='inline'>
+<p>When this paste was created, in string form. Is parsed into a DateTime.</p>
 </div>
           
         </li>
@@ -501,7 +513,8 @@ pastes, this only affects how it appears on the website.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>When this paste expires, in string form. Is parsed into a DateTime.</p>
+            &mdash; <div class='inline'>
+<p>When this paste expires, in string form. Is parsed into a DateTime.</p>
 </div>
           
         </li>
@@ -513,7 +526,8 @@ pastes, this only affects how it appears on the website.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>An array either of Section objects (if you are creating a new paste) or a hash</p>
+            &mdash; <div class='inline'>
+<p>An array either of Section objects (if you are creating a new paste) or a hash</p>
 </div>
           
         </li>
@@ -583,7 +597,8 @@ pastes, this only affects how it appears on the website.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns When this paste was created.</p>
+    
+<p>Returns When this paste was created.</p>
 
 
   </div>
@@ -601,7 +616,8 @@ pastes, this only affects how it appears on the website.</p>
       
       
         &mdash;
-        <div class='inline'><p>When this paste was created.</p>
+        <div class='inline'>
+<p>When this paste was created.</p>
 </div>
       
     </li>
@@ -642,7 +658,8 @@ pastes, this only affects how it appears on the website.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns The paste&#39;s description.</p>
+    
+<p>Returns The paste&#39;s description.</p>
 
 
   </div>
@@ -660,7 +677,8 @@ pastes, this only affects how it appears on the website.</p>
       
       
         &mdash;
-        <div class='inline'><p>The paste&#39;s description.</p>
+        <div class='inline'>
+<p>The paste&#39;s description.</p>
 </div>
       
     </li>
@@ -701,7 +719,8 @@ pastes, this only affects how it appears on the website.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns When this paste will expire, or nil if it never expires.</p>
+    
+<p>Returns When this paste will expire, or nil if it never expires.</p>
 
 
   </div>
@@ -719,7 +738,8 @@ pastes, this only affects how it appears on the website.</p>
       
       
         &mdash;
-        <div class='inline'><p>When this paste will expire, or nil if it never expires.</p>
+        <div class='inline'>
+<p>When this paste will expire, or nil if it never expires.</p>
 </div>
       
     </li>
@@ -760,7 +780,8 @@ pastes, this only affects how it appears on the website.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns The paste&#39;s ID.</p>
+    
+<p>Returns The paste&#39;s ID.</p>
 
 
   </div>
@@ -778,7 +799,8 @@ pastes, this only affects how it appears on the website.</p>
       
       
         &mdash;
-        <div class='inline'><p>The paste&#39;s ID.</p>
+        <div class='inline'>
+<p>The paste&#39;s ID.</p>
 </div>
       
     </li>
@@ -819,7 +841,8 @@ pastes, this only affects how it appears on the website.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns An array of Sections for this paste.</p>
+    
+<p>Returns An array of Sections for this paste.</p>
 
 
   </div>
@@ -837,7 +860,8 @@ pastes, this only affects how it appears on the website.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of Sections for this paste.</p>
+        <div class='inline'>
+<p>An array of Sections for this paste.</p>
 </div>
       
     </li>
@@ -878,7 +902,8 @@ pastes, this only affects how it appears on the website.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns How many views the paste has.</p>
+    
+<p>Returns How many views the paste has.</p>
 
 
   </div>
@@ -896,7 +921,8 @@ pastes, this only affects how it appears on the website.</p>
       
       
         &mdash;
-        <div class='inline'><p>How many views the paste has.</p>
+        <div class='inline'>
+<p>How many views the paste has.</p>
 </div>
       
     </li>
@@ -942,7 +968,8 @@ pastes, this only affects how it appears on the website.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns Whether this paste is encrypted.</p>
+    
+<p>Returns Whether this paste is encrypted.</p>
 
 
   </div>
@@ -960,7 +987,8 @@ pastes, this only affects how it appears on the website.</p>
       
       
         &mdash;
-        <div class='inline'><p>Whether this paste is encrypted.</p>
+        <div class='inline'>
+<p>Whether this paste is encrypted.</p>
 </div>
       
     </li>
@@ -999,7 +1027,8 @@ pastes, this only affects how it appears on the website.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts this to a hash object. Used in submitting pastes.</p>
+    
+<p>Converts this to a hash object. Used in submitting pastes.</p>
 
 
   </div>
@@ -1066,9 +1095,9 @@ pastes, this only affects how it appears on the website.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue May 12 13:52:05 2020 by
+  Generated on Mon Jan 18 11:11:45 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.25 (ruby-2.6.5).
+  0.9.26 (ruby-3.0.0).
 </div>
 
     </div>
